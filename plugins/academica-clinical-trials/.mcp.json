@@ -1,0 +1,1 @@
+{"mcpServers":{"academica-clinical-trials":{"type":"http","url":"https://academica.sh/api/mcp/clinical-trials","headers":{"Authorization":"Bearer ${ACADEMICA_API_KEY}"}}}}

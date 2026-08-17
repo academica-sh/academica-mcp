@@ -1,0 +1,1 @@
+{"mcpServers":{"academica-hcp":{"type":"http","url":"https://academica.sh/api/mcp/hcp","headers":{"Authorization":"Bearer ${ACADEMICA_API_KEY}"}}}}
