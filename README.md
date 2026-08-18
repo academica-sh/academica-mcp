@@ -23,7 +23,7 @@
 | ◇ | **Open Payments** | CMS transfers of value, manufacturers, physicians, and ownership interests | `academica-open-payments` |
 | ✣ | **Healthcare Providers** | NPI identities, specialties, taxonomies, credentials, and practice locations | `academica-hcp` |
 
-## Install one server in under a minute
+## Install one server in under a minute with Claude Code
 
 ```text
 /plugin marketplace add academica-sh/academica-mcp
@@ -37,7 +37,7 @@ export ACADEMICA_API_KEY="ak_…"
 ```
 
 > [!IMPORTANT]
-> **One repository does not mean four active servers.** This repository carries four independent plugin manifests. Install one, several, or all four. Each selected plugin connects to its hosted Academica endpoint.
+> **One repository is the distribution authority; activation remains client-specific.** Claude Code and Codex expose four independently installable plugins. Cursor, Pi, Hermes, and the optional aggregate configurations register four named servers together and let the client control which tools remain enabled.
 
 ## From research question to cited evidence
 
@@ -181,6 +181,33 @@ https://academica.sh/api/mcp/hcp/openapi.json
 
 Use API Key authentication with the Bearer scheme. The privacy policy URL is `https://academica.sh/legal/privacy`.
 </details>
+
+## Client compatibility
+
+| Client | Repository integration | Authentication | Selection model |
+|---|---|---|---|
+| Claude Code | `.claude-plugin/marketplace.json` plus four plugin packages | `ACADEMICA_API_KEY` environment substitution | Install each evidence surface independently |
+| Cursor | `.cursor-plugin/plugin.json` | Required secret set under **Plugins → Configure** | One plugin exposes four named servers |
+| Codex | `.agents/plugins/marketplace.json` plus four `.codex-plugin` manifests | Native `bearer_token_env_var` | Install each evidence surface independently |
+| OpenCode | `clients/opencode/*.json` | `{env:ACADEMICA_API_KEY}` header substitution | Individual files plus optional `all.json` |
+| Hermes Agent | `clients/hermes/config.yaml` | `${ACADEMICA_API_KEY}` header substitution | Four servers in one configuration |
+| DeepSeek Harness | `package.json` plus `cordis.patch.yml` | Environment-backed header in the Cordis bundle | Four MCP-client instances per installed profile |
+| Pi | `package.json` plus `extensions/academica-mcp.ts` | Environment-backed header through `pi-mcp-adapter` | One package; servers can be disabled individually |
+| Agent Plugins | Root `plugin.json` plus `mcp.json` | Client-managed; the portable standard stores no secret references | One portable plugin declares four servers |
+
+The portable Agent Plugins files intentionally contain no Authorization header. Clients that require bearer authentication use the native integrations listed above.
+
+### Verified distribution gates
+
+- Root Agent Plugins manifests validate against the 1.0.0 schemas.
+- All four Codex plugins pass the Codex plugin validator; an isolated install retained `ACADEMICA_API_KEY` as the bearer-token environment variable.
+- All five OpenCode configurations validate against the current OpenCode schema.
+- Hermes configuration and catalog manifests parse as YAML.
+- The Pi package installs from a local Git source and exports a valid extension function.
+- The npm package contains the Pi extension and DeepSeek Cordis bundle; dependency audit reports zero known vulnerabilities.
+- All JSON manifests parse, and no operational API key is committed.
+
+These checks prove packaging and configuration compatibility. Directory approval, npm publication, and authenticated evidence queries are separate release gates.
 
 ## Built for evidence work
 
