@@ -1,7 +1,7 @@
 {
   "name": "academica-mcp",
-  "version": "1.1.0",
-  "description": "Read-only scientific, healthcare, and SEC ownership evidence.",
+  "version": "1.2.0",
+  "description": "Read-only scientific, healthcare, SEC ownership, filing, and fundamentals evidence.",
   "author": {
     "name": "Academica",
     "email": "sid@academica.sh"
@@ -9,7 +9,7 @@
   "homepage": "https://academica.sh/mcp",
   "repository": "https://github.com/academica-sh/academica-mcp",
   "license": "MIT",
-  "keywords": ["mcp", "pubmed", "clinical-trials", "open-payments", "healthcare"],
+  "keywords": ["mcp", "pubmed", "clinical-trials", "open-payments", "healthcare", "sec-filings", "xbrl"],
   "logo": "assets/academica-mark.svg",
   "mcpServers": {
     "academica-pubmed": {
@@ -30,6 +30,10 @@
     },
     "academica-sec-ownership": {
       "url": "https://academica.sh/api/mcp/sec-ownership",
+      "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
+    },
+    "academica-sec-filings": {
+      "url": "https://academica.sh/api/mcp/sec-filings",
       "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
     }
   },

@@ -9,7 +9,8 @@ export default createMcpAdapter({
       "academica-clinical-trials": {url: "https://academica.sh/api/mcp/clinical-trials", headers: {Authorization: authorization}},
       "academica-open-payments": {url: "https://academica.sh/api/mcp/open-payments", headers: {Authorization: authorization}},
       "academica-hcp": {url: "https://academica.sh/api/mcp/hcp", headers: {Authorization: authorization}},
-      "academica-sec-ownership": {url: "https://academica.sh/api/mcp/sec-ownership", headers: {Authorization: authorization}}
+      "academica-sec-ownership": {url: "https://academica.sh/api/mcp/sec-ownership", headers: {Authorization: authorization}},
+      "academica-sec-filings": {url: "https://academica.sh/api/mcp/sec-filings", headers: {Authorization: authorization}}
     }
   }
 });

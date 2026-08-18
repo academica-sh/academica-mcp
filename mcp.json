@@ -20,6 +20,10 @@
     "academica-sec-ownership": {
       "type": "streamable-http",
       "url": "https://academica.sh/api/mcp/sec-ownership"
+    },
+    "academica-sec-filings": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/sec-filings"
     }
   }
 }

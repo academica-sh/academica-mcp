@@ -25,6 +25,11 @@
       "qualifiedName": "@academica/sec-ownership",
       "displayName": "Academica SEC Ownership & Flows",
       "url": "https://academica.sh/api/mcp/sec-ownership"
+    },
+    {
+      "qualifiedName": "@academica/sec-filings",
+      "displayName": "Academica SEC Filings & Fundamentals",
+      "url": "https://academica.sh/api/mcp/sec-filings"
     }
   ]
 }
