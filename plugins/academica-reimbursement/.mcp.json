@@ -1,0 +1,1 @@
+{"mcpServers":{"academica-reimbursement":{"type":"http","url":"https://academica.sh/api/mcp/reimbursement","headers":{"Authorization":"Bearer ${ACADEMICA_API_KEY}"}}}}
