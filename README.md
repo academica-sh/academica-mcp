@@ -156,6 +156,20 @@ The Pi package loads an Academica extension backed by `pi-mcp-adapter`. All four
 </details>
 
 <details>
+<summary><strong>Smithery</strong></summary>
+
+Smithery treats each hosted endpoint as an independent catalog server. The four publication records and the shared session-authorization schema are maintained under [`smithery`](smithery).
+
+The session field accepts the complete authorization value:
+
+```text
+Bearer <Academica API key>
+```
+
+No key is stored in the repository or catalog metadata.
+</details>
+
+<details>
 <summary><strong>Generic MCP clients</strong></summary>
 
 ```text
@@ -193,6 +207,7 @@ Use API Key authentication with the Bearer scheme. The privacy policy URL is `ht
 | Hermes Agent | `clients/hermes/config.yaml` | `${ACADEMICA_API_KEY}` header substitution | Four servers in one configuration |
 | DeepSeek Harness | `package.json` plus `cordis.patch.yml` | Environment-backed header in the Cordis bundle | Four MCP-client instances per installed profile |
 | Pi | `package.json` plus `extensions/academica-mcp.ts` | Environment-backed header through `pi-mcp-adapter` | One package; servers can be disabled individually |
+| Smithery | Four hosted URL-server records under `smithery/` | Session-scoped `Authorization` header mapping | One catalog entry per evidence surface |
 | Agent Plugins | Root `plugin.json` plus `mcp.json` | Client-managed; the portable standard stores no secret references | One portable plugin declares four servers |
 
 The portable Agent Plugins files intentionally contain no Authorization header. Clients that require bearer authentication use the native integrations listed above.
@@ -205,6 +220,7 @@ The portable Agent Plugins files intentionally contain no Authorization header. 
 - Hermes configuration and catalog manifests parse as YAML.
 - The Pi package installs from a local Git source and exports a valid extension function.
 - The npm package contains the Pi extension and DeepSeek Cordis bundle; dependency audit reports zero known vulnerabilities.
+- Smithery publication records enumerate four hosted servers, and the session schema validates as JSON Schema 2020-12.
 - All JSON manifests parse, and no operational API key is committed.
 
 These checks prove packaging and configuration compatibility. Directory approval, npm publication, and authenticated evidence queries are separate release gates.
@@ -231,6 +247,7 @@ academica-mcp/
 ├── cordis.patch.yml                    # DeepSeek MCP client bundle
 ├── extensions/                         # Pi MCP adapter extension
 ├── clients/                            # OpenCode and Hermes configurations
+├── smithery/                           # Hosted-server publication records and session schema
 ├── plugins/
 │   ├── academica-pubmed/                # Claude and Codex plugin manifests
 │   ├── academica-clinical-trials/

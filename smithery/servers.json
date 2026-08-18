@@ -1,0 +1,25 @@
+{
+  "$schema": "./servers.schema.json",
+  "servers": [
+    {
+      "qualifiedName": "@academica/pubmed",
+      "displayName": "Academica PubMed",
+      "url": "https://academica.sh/api/mcp/pubmed"
+    },
+    {
+      "qualifiedName": "@academica/clinical-trials",
+      "displayName": "Academica Clinical Trials",
+      "url": "https://academica.sh/api/mcp/clinical-trials"
+    },
+    {
+      "qualifiedName": "@academica/open-payments",
+      "displayName": "Academica Open Payments",
+      "url": "https://academica.sh/api/mcp/open-payments"
+    },
+    {
+      "qualifiedName": "@academica/hcp",
+      "displayName": "Academica Healthcare Providers",
+      "url": "https://academica.sh/api/mcp/hcp"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Academica authorization",
+  "description": "Session configuration for an Academica hosted MCP server.",
+  "type": "object",
+  "properties": {
+    "authorization": {
+      "type": "string",
+      "title": "Authorization",
+      "description": "Complete Bearer authorization value, for example: Bearer ak_…",
+      "minLength": 8,
+      "x-from": {
+        "header": "academica-authorization"
+      },
+      "x-to": {
+        "header": "Authorization"
+      }
+    }
+  },
+  "required": [
+    "authorization"
+  ],
+  "additionalProperties": false
+}
