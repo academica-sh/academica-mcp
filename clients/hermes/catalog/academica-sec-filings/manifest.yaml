@@ -1,0 +1,17 @@
+manifest_version: 1
+name: academica-sec-filings
+description: SEC filing sections, filing chronology, XBRL facts, metric traces, and deterministic disclosure comparisons.
+source: https://github.com/academica-sh/academica-mcp
+transport:
+  type: http
+  url: "https://academica.sh/api/mcp/sec-filings"
+auth:
+  type: api_key
+  env:
+    - {name: ACADEMICA_API_KEY, prompt: "Academica API key", required: true, secret: true}
+suggest:
+  keywords: [SEC filings, 10-K, 10-Q, XBRL, fundamentals]
+  hosts: [academica.sh]
+post_install: |
+  API keys: https://academica.sh/mcp/keys
+  Privacy: https://academica.sh/legal/privacy

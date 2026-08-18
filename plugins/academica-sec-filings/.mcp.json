@@ -1,0 +1,1 @@
+{"mcpServers":{"academica-sec-filings":{"type":"http","url":"https://academica.sh/api/mcp/sec-filings","headers":{"Authorization":"Bearer ${ACADEMICA_API_KEY}"}}}}

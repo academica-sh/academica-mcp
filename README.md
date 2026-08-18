@@ -2,7 +2,7 @@
   <img src="assets/academica-mark.svg" width="92" alt="Academica">
   <h1>Academica MCP</h1>
   <p><strong>Evidence infrastructure for scientific, healthcare, and financial agents.</strong></p>
-  <p>Biomedical literature, clinical trials, physician-industry payments, healthcare-provider records, and SEC ownership filings through five read-only Model Context Protocol servers.</p>
+  <p>Biomedical literature, clinical trials, physician-industry payments, healthcare-provider records, SEC ownership, and SEC filing fundamentals through six read-only Model Context Protocol servers.</p>
 
   [![MCP](https://img.shields.io/badge/MCP-Streamable_HTTP-e87070?style=flat-square)](https://modelcontextprotocol.io/)
   [![Access](https://img.shields.io/badge/access-read--only-111a2d?style=flat-square)](https://academica.sh/)
@@ -23,6 +23,7 @@
 | ◇ | **Open Payments** | CMS transfers of value, manufacturers, physicians, and ownership interests | `academica-open-payments` |
 | ✣ | **Healthcare Providers** | NPI identities, specialties, taxonomies, credentials, and practice locations | `academica-hcp` |
 | § | **SEC Ownership & Flows** | 13F and N-PORT positions, manager portfolios, security holders, 13D/G, and Form 4 events | `academica-sec-ownership` |
+| 10-K | **SEC Filings & Fundamentals** | Filing sections, chronology, XBRL facts, metric traces, peer comparisons, and disclosure diffs | `academica-sec-filings` |
 
 ## Install one server in under a minute with Claude Code
 
@@ -38,7 +39,7 @@ export ACADEMICA_API_KEY="ak_…"
 ```
 
 > [!IMPORTANT]
-> **One repository is the distribution authority; activation remains client-specific.** Claude Code and Codex expose five independently installable plugins. Cursor, Pi, Hermes, and the optional aggregate configurations register five named servers together and let the client control which tools remain enabled.
+> **One repository is the distribution authority; activation remains client-specific.** Claude Code and Codex expose six independently installable plugins. Cursor, Pi, Hermes, and the optional aggregate configurations register six named servers together and let the client control which tools remain enabled.
 
 ## From research question to cited evidence
 
@@ -59,8 +60,9 @@ flowchart LR
 | Open Payments | `https://academica.sh/api/mcp/open-payments` | [`openapi.json`](https://academica.sh/api/mcp/open-payments/openapi.json) |
 | Healthcare Providers | `https://academica.sh/api/mcp/hcp` | [`openapi.json`](https://academica.sh/api/mcp/hcp/openapi.json) |
 | SEC Ownership & Flows | `https://academica.sh/api/mcp/sec-ownership` | [`openapi.json`](https://academica.sh/api/mcp/sec-ownership/openapi.json) |
+| SEC Filings & Fundamentals | `https://academica.sh/api/mcp/sec-filings` | [`openapi.json`](https://academica.sh/api/mcp/sec-filings/openapi.json) |
 
-All five servers use Streamable HTTP and accept an Academica API key in the `Authorization: Bearer <key>` header.
+All six servers use Streamable HTTP and accept an Academica API key in the `Authorization: Bearer <key>` header.
 
 ## What a result preserves
 
@@ -91,6 +93,7 @@ Install additional evidence surfaces independently:
 /plugin install academica-open-payments@academica
 /plugin install academica-hcp@academica
 /plugin install academica-sec-ownership@academica
+/plugin install academica-sec-filings@academica
 ```
 </details>
 
@@ -109,7 +112,7 @@ Authorization: Bearer <Academica API key>
 <details>
 <summary><strong>Cursor</strong></summary>
 
-Install the repository as a Cursor Plugin. Under **Plugins → Configure**, set the required `ACADEMICA_API_KEY` variable. The native manifest registers all five servers without storing the key in the repository.
+Install the repository as a Cursor Plugin. Under **Plugins → Configure**, set the required `ACADEMICA_API_KEY` variable. The native manifest registers all six servers without storing the key in the repository.
 </details>
 
 <details>
@@ -121,7 +124,7 @@ codex plugin marketplace add academica-sh/academica-mcp
 codex plugin add academica-pubmed@academica
 ```
 
-The Codex marketplace contains five independently installable plugins. Each uses native `bearer_token_env_var` credential resolution.
+The Codex marketplace contains six independently installable plugins. Each uses native `bearer_token_env_var` credential resolution.
 </details>
 
 <details>
@@ -133,7 +136,7 @@ Copy or merge one file from [`clients/opencode`](clients/opencode) into the appl
 <details>
 <summary><strong>Hermes Agent</strong></summary>
 
-Merge [`clients/hermes/config.yaml`](clients/hermes/config.yaml) into `~/.hermes/config.yaml` and expose `ACADEMICA_API_KEY` to Hermes. Five upstream-ready catalog manifests are provided under [`clients/hermes/catalog`](clients/hermes/catalog).
+Merge [`clients/hermes/config.yaml`](clients/hermes/config.yaml) into `~/.hermes/config.yaml` and expose `ACADEMICA_API_KEY` to Hermes. Six upstream-ready catalog manifests are provided under [`clients/hermes/catalog`](clients/hermes/catalog).
 </details>
 
 <details>
@@ -144,7 +147,7 @@ export ACADEMICA_API_KEY="ak_…"
 dsh plugin --profile web add github:academica-sh/academica-mcp
 ```
 
-The package mounts five instances of DeepSeek's official Streamable HTTP MCP client through [`cordis.patch.yml`](cordis.patch.yml). Installation is per Harness profile.
+The package mounts six instances of DeepSeek's official Streamable HTTP MCP client through [`cordis.patch.yml`](cordis.patch.yml). Installation is per Harness profile.
 </details>
 
 <details>
@@ -155,13 +158,13 @@ export ACADEMICA_API_KEY="ak_…"
 pi install git:github.com/academica-sh/academica-mcp
 ```
 
-The Pi package loads an Academica extension backed by `pi-mcp-adapter`. All five servers are available; individual entries can be enabled or disabled through the adapter controls.
+The Pi package loads an Academica extension backed by `pi-mcp-adapter`. All six servers are available; individual entries can be enabled or disabled through the adapter controls.
 </details>
 
 <details>
 <summary><strong>Smithery</strong></summary>
 
-Smithery treats each hosted endpoint as an independent catalog server. The five publication records and the shared session-authorization schema are maintained under [`smithery`](smithery).
+Smithery treats each hosted endpoint as an independent catalog server. The six publication records and the shared session-authorization schema are maintained under [`smithery`](smithery).
 
 The session field accepts the complete authorization value:
 
@@ -181,7 +184,7 @@ URL: https://academica.sh/api/mcp/<server>
 Header: Authorization: Bearer <Academica API key>
 ```
 
-Valid server paths are `pubmed`, `clinical-trials`, `open-payments`, `hcp`, and `sec-ownership`.
+Valid server paths are `pubmed`, `clinical-trials`, `open-payments`, `hcp`, `sec-ownership`, and `sec-filings`.
 </details>
 
 <details>
@@ -195,6 +198,7 @@ https://academica.sh/api/mcp/clinical-trials/openapi.json
 https://academica.sh/api/mcp/open-payments/openapi.json
 https://academica.sh/api/mcp/hcp/openapi.json
 https://academica.sh/api/mcp/sec-ownership/openapi.json
+https://academica.sh/api/mcp/sec-filings/openapi.json
 ```
 
 Use API Key authentication with the Bearer scheme. The privacy policy URL is `https://academica.sh/legal/privacy`.
@@ -204,27 +208,27 @@ Use API Key authentication with the Bearer scheme. The privacy policy URL is `ht
 
 | Client | Repository integration | Authentication | Selection model |
 |---|---|---|---|
-| Claude Code | `.claude-plugin/marketplace.json` plus five plugin packages | `ACADEMICA_API_KEY` environment substitution | Install each evidence surface independently |
-| Cursor | `.cursor-plugin/plugin.json` | Required secret set under **Plugins → Configure** | One plugin exposes five named servers |
-| Codex | `.agents/plugins/marketplace.json` plus five `.codex-plugin` manifests | Native `bearer_token_env_var` | Install each evidence surface independently |
+| Claude Code | `.claude-plugin/marketplace.json` plus six plugin packages | `ACADEMICA_API_KEY` environment substitution | Install each evidence surface independently |
+| Cursor | `.cursor-plugin/plugin.json` | Required secret set under **Plugins → Configure** | One plugin exposes six named servers |
+| Codex | `.agents/plugins/marketplace.json` plus six `.codex-plugin` manifests | Native `bearer_token_env_var` | Install each evidence surface independently |
 | OpenCode | `clients/opencode/*.json` | `{env:ACADEMICA_API_KEY}` header substitution | Individual files plus optional `all.json` |
-| Hermes Agent | `clients/hermes/config.yaml` | `${ACADEMICA_API_KEY}` header substitution | Five servers in one configuration |
-| DeepSeek Harness | `package.json` plus `cordis.patch.yml` | Environment-backed header in the Cordis bundle | Five MCP-client instances per installed profile |
+| Hermes Agent | `clients/hermes/config.yaml` | `${ACADEMICA_API_KEY}` header substitution | Six servers in one configuration |
+| DeepSeek Harness | `package.json` plus `cordis.patch.yml` | Environment-backed header in the Cordis bundle | Six MCP-client instances per installed profile |
 | Pi | `package.json` plus `extensions/academica-mcp.ts` | Environment-backed header through `pi-mcp-adapter` | One package; servers can be disabled individually |
-| Smithery | Five hosted URL-server records under `smithery/` | Session-scoped `Authorization` header mapping | One catalog entry per evidence surface |
-| Agent Plugins | Root `plugin.json` plus `mcp.json` | Client-managed; the portable standard stores no secret references | One portable plugin declares five servers |
+| Smithery | Six hosted URL-server records under `smithery/` | Session-scoped `Authorization` header mapping | One catalog entry per evidence surface |
+| Agent Plugins | Root `plugin.json` plus `mcp.json` | Client-managed; the portable standard stores no secret references | One portable plugin declares six servers |
 
 The portable Agent Plugins files intentionally contain no Authorization header. Clients that require bearer authentication use the native integrations listed above.
 
 ### Verified distribution gates
 
 - Root Agent Plugins manifests validate against the 1.0.0 schemas.
-- All five Codex plugins declare native bearer-token environment-variable resolution.
+- All six Codex plugins declare native bearer-token environment-variable resolution.
 - All six OpenCode configurations validate as JSON and retain OAuth-disabled bearer authentication.
 - Hermes configuration and catalog manifests parse as YAML.
 - The Pi package installs from a local Git source and exports a valid extension function.
 - The npm package contains the Pi extension and DeepSeek Cordis bundle; dependency audit reports zero known vulnerabilities.
-- Smithery publication records enumerate five hosted servers, and the session schema validates as JSON Schema 2020-12.
+- Smithery publication records enumerate six hosted servers, and the session schema validates as JSON Schema 2020-12.
 - All JSON manifests parse, and no operational API key is committed.
 
 These checks prove packaging and configuration compatibility. Directory approval, npm publication, and authenticated evidence queries are separate release gates.
@@ -243,7 +247,7 @@ These checks prove packaging and configuration compatibility. Directory approval
 ```text
 academica-mcp/
 ├── plugin.json                         # Open Plugins identity
-├── mcp.json                            # Portable five-server MCP catalog
+├── mcp.json                            # Portable six-server MCP catalog
 ├── .cursor-plugin/plugin.json          # Cursor variables and authenticated MCPs
 ├── .agents/plugins/marketplace.json    # Codex marketplace catalog
 ├── .claude-plugin/marketplace.json      # Claude Code marketplace catalog
@@ -257,13 +261,15 @@ academica-mcp/
 │   ├── academica-clinical-trials/
 │   ├── academica-open-payments/
 │   ├── academica-hcp/
-│   └── academica-sec-ownership/
+│   ├── academica-sec-ownership/
+│   └── academica-sec-filings/
 └── registry/
     ├── pubmed/server.json               # Official MCP Registry metadata
     ├── clinical-trials/server.json
     ├── open-payments/server.json
     ├── hcp/server.json
-    └── sec-ownership/server.json
+    ├── sec-ownership/server.json
+    └── sec-filings/server.json
 ```
 
 Cloning this repository downloads distribution metadata. It does not download the evidence corpora or start local servers; the manifests connect compatible clients to Academica's hosted endpoints.

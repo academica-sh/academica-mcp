@@ -6,13 +6,14 @@
     "email": "sid@academica.sh"
   },
   "metadata": {
-    "description": "Evidence retrieval plugins for biomedical literature, clinical trials, CMS payments, and US healthcare providers"
+    "description": "Evidence retrieval plugins for biomedical literature, clinical trials, CMS payments, healthcare providers, SEC ownership, filings, and XBRL fundamentals"
   },
   "plugins": [
     {"name":"academica-pubmed","source":"./plugins/academica-pubmed","description":"Ranked PubMed literature retrieval and citation verification.","version":"1.0.0","category":"research","tags":["pubmed","biomedical","citations"]},
     {"name":"academica-clinical-trials","source":"./plugins/academica-clinical-trials","description":"Clinical trial protocol, intervention, enrollment, and result retrieval.","version":"1.0.0","category":"research","tags":["clinical-trials","protocols","studies"]},
     {"name":"academica-open-payments","source":"./plugins/academica-open-payments","description":"CMS Open Payments financial-disclosure retrieval.","version":"1.0.0","category":"research","tags":["open-payments","cms","disclosures"]},
     {"name":"academica-hcp","source":"./plugins/academica-hcp","description":"US NPI healthcare-provider and taxonomy retrieval.","version":"1.0.0","category":"research","tags":["npi","nppes","providers"]},
-    {"name":"academica-sec-ownership","source":"./plugins/academica-sec-ownership","description":"Filing-derived institutional positions, portfolios, security resolution, and ownership events.","version":"1.1.0","category":"research","tags":["sec","13f","n-port","ownership"]}
+    {"name":"academica-sec-ownership","source":"./plugins/academica-sec-ownership","description":"Filing-derived institutional positions, portfolios, security resolution, and ownership events.","version":"1.1.0","category":"research","tags":["sec","13f","n-port","ownership"]},
+    {"name":"academica-sec-filings","source":"./plugins/academica-sec-filings","description":"SEC filing sections, filing chronology, XBRL facts, metric traces, and deterministic disclosure comparisons.","version":"1.2.0","category":"research","tags":["sec","10-k","10-q","xbrl"]}
   ]
 }
