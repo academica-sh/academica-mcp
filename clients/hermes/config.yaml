@@ -27,3 +27,7 @@ mcp_servers:
     url: https://academica.sh/api/mcp/provider-market
     headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
     supports_parallel_tool_calls: true
+  academica-reimbursement:
+    url: https://academica.sh/api/mcp/reimbursement
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true

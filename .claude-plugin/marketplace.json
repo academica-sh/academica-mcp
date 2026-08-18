@@ -15,6 +15,7 @@
     {"name":"academica-hcp","source":"./plugins/academica-hcp","description":"US NPI healthcare-provider and taxonomy retrieval.","version":"1.0.0","category":"research","tags":["npi","nppes","providers"]},
     {"name":"academica-sec-ownership","source":"./plugins/academica-sec-ownership","description":"Filing-derived institutional positions, portfolios, security resolution, and ownership events.","version":"1.1.0","category":"research","tags":["sec","13f","n-port","ownership"]},
     {"name":"academica-sec-filings","source":"./plugins/academica-sec-filings","description":"SEC filing sections, filing chronology, XBRL facts, metric traces, and deterministic disclosure comparisons.","version":"1.2.0","category":"research","tags":["sec","10-k","10-q","xbrl"]},
-    {"name":"academica-provider-market","source":"./plugins/academica-provider-market","description":"NPPES provider identity, declared organization relationships, observed procedure utilization, and account comparisons.","version":"1.3.0","category":"research","tags":["npi","nppes","providers","utilization","accounts"]}
+    {"name":"academica-provider-market","source":"./plugins/academica-provider-market","description":"NPPES provider identity, declared organization relationships, observed procedure utilization, and account comparisons.","version":"1.3.0","category":"research","tags":["npi","nppes","providers","utilization","accounts"]},
+    {"name":"academica-reimbursement","source":"./plugins/academica-reimbursement","description":"Native reimbursement schedules, code evidence, provider economics, jurisdiction coverage, and observed procedure volume.","version":"1.4.0","category":"research","tags":["reimbursement","market-access","rates","hcris","cms"]}
   ]
 }

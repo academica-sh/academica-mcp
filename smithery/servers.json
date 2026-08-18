@@ -35,6 +35,11 @@
       "qualifiedName": "@academica/provider-market",
       "displayName": "Academica Provider & Account Intelligence",
       "url": "https://academica.sh/api/mcp/provider-market"
+    },
+    {
+      "qualifiedName": "@academica/reimbursement",
+      "displayName": "Academica Reimbursement & Market Access",
+      "url": "https://academica.sh/api/mcp/reimbursement"
     }
   ]
 }

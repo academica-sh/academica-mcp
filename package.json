@@ -1,8 +1,8 @@
 {
   "name": "dsh-plugin-academica",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "type": "module",
-  "description": "Academica scientific, healthcare, SEC, provider-market, and account intelligence MCP bundle for DeepSeek Harness and Pi.",
+  "description": "Academica scientific, healthcare, SEC, provider-market, reimbursement, and market-access MCP bundle for DeepSeek Harness and Pi.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -29,7 +29,8 @@
     "13f",
     "sec-filings",
     "xbrl",
-    "provider-market"
+    "provider-market",
+    "reimbursement"
   ],
   "dsh": {
     "bundle": {

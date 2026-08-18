@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "academica-mcp",
-  "version": "1.3.0",
-  "description": "Read-only scientific, healthcare, SEC, provider-market, and account intelligence evidence for AI agents.",
+  "version": "1.4.0",
+  "description": "Read-only scientific, healthcare, SEC, provider-market, reimbursement, and market-access evidence for AI agents.",
   "author": {
     "name": "Academica",
     "email": "sid@academica.sh",
@@ -23,6 +23,8 @@
     "sec-filings",
     "xbrl",
     "provider-market",
-    "account-intelligence"
+    "account-intelligence",
+    "reimbursement",
+    "market-access"
   ]
 }

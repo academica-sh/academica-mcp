@@ -28,6 +28,10 @@
     "academica-provider-market": {
       "type": "streamable-http",
       "url": "https://academica.sh/api/mcp/provider-market"
+    },
+    "academica-reimbursement": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/reimbursement"
     }
   }
 }
