@@ -1,6 +1,6 @@
 # Smithery publication
 
-Academica exposes four independently publishable Streamable HTTP servers. Smithery publishes each hosted URL as its own catalog entry; it does not build or host these servers from this repository.
+Academica exposes five independently publishable Streamable HTTP servers. Smithery publishes each hosted URL as its own catalog entry; it does not build or host these servers from this repository.
 
 | Qualified name | Hosted server URL |
 |---|---|
@@ -8,6 +8,7 @@ Academica exposes four independently publishable Streamable HTTP servers. Smithe
 | `@academica/clinical-trials` | `https://academica.sh/api/mcp/clinical-trials` |
 | `@academica/open-payments` | `https://academica.sh/api/mcp/open-payments` |
 | `@academica/hcp` | `https://academica.sh/api/mcp/hcp` |
+| `@academica/sec-ownership` | `https://academica.sh/api/mcp/sec-ownership` |
 
 The records are machine-readable in [`servers.json`](servers.json). The shared [`authorization.config-schema.json`](authorization.config-schema.json) maps a session-scoped value into the upstream `Authorization` header. Users enter the complete value in the form `Bearer <Academica API key>`; no credential is stored in this repository.
 

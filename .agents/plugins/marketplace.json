@@ -5,6 +5,7 @@
     {"name":"academica-pubmed","source":{"source":"local","path":"./plugins/academica-pubmed"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
     {"name":"academica-clinical-trials","source":{"source":"local","path":"./plugins/academica-clinical-trials"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
     {"name":"academica-open-payments","source":{"source":"local","path":"./plugins/academica-open-payments"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
-    {"name":"academica-hcp","source":{"source":"local","path":"./plugins/academica-hcp"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"}
+    {"name":"academica-hcp","source":{"source":"local","path":"./plugins/academica-hcp"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
+    {"name":"academica-sec-ownership","source":{"source":"local","path":"./plugins/academica-sec-ownership"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"}
   ]
 }

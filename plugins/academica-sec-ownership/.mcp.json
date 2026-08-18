@@ -1,0 +1,1 @@
+{"mcpServers":{"academica-sec-ownership":{"type":"http","url":"https://academica.sh/api/mcp/sec-ownership","headers":{"Authorization":"Bearer ${ACADEMICA_API_KEY}"}}}}

@@ -1,7 +1,7 @@
 {
   "name": "academica-mcp",
-  "version": "1.0.0",
-  "description": "Read-only scientific evidence from PubMed, Clinical Trials, Open Payments, and healthcare-provider records.",
+  "version": "1.1.0",
+  "description": "Read-only scientific, healthcare, and SEC ownership evidence.",
   "author": {
     "name": "Academica",
     "email": "sid@academica.sh"
@@ -26,6 +26,10 @@
     },
     "academica-hcp": {
       "url": "https://academica.sh/api/mcp/hcp",
+      "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
+    },
+    "academica-sec-ownership": {
+      "url": "https://academica.sh/api/mcp/sec-ownership",
       "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
     }
   },

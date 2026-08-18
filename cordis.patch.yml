@@ -31,3 +31,11 @@
         url: https://academica.sh/api/mcp/hcp
         headers:
           Authorization: !!js `Bearer ${process.env.ACADEMICA_API_KEY}`
+    - id: academica-sec-ownership-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: academica_sec_ownership
+        transport: streamable-http
+        url: https://academica.sh/api/mcp/sec-ownership
+        headers:
+          Authorization: !!js `Bearer ${process.env.ACADEMICA_API_KEY}`

@@ -15,3 +15,7 @@ mcp_servers:
     url: https://academica.sh/api/mcp/hcp
     headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
     supports_parallel_tool_calls: true
+  academica-sec-ownership:
+    url: https://academica.sh/api/mcp/sec-ownership
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true
