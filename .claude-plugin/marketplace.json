@@ -3,7 +3,7 @@
   "name": "academica",
   "owner": {
     "name": "Academica",
-    "email": "team@academica.sh"
+    "email": "sid@academica.sh"
   },
   "metadata": {
     "description": "Evidence retrieval plugins for biomedical literature, clinical trials, CMS payments, and US healthcare providers"

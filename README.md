@@ -7,7 +7,7 @@
   [![MCP](https://img.shields.io/badge/MCP-Streamable_HTTP-e87070?style=flat-square)](https://modelcontextprotocol.io/)
   [![Access](https://img.shields.io/badge/access-read--only-111a2d?style=flat-square)](https://academica.sh/)
   [![Authentication](https://img.shields.io/badge/auth-Bearer-d75b5b?style=flat-square)](https://academica.sh/mcp/keys)
-  [![License](https://img.shields.io/badge/license-Apache--2.0-59636e?style=flat-square)](LICENSE)
+  [![License](https://img.shields.io/badge/license-MIT-59636e?style=flat-square)](LICENSE)
 
   [Get an API key](https://academica.sh/mcp/keys) · [Documentation](https://academica.sh/mcp) · [Report an issue](https://github.com/academica-sh/academica-mcp/issues)
 </div>
@@ -182,7 +182,7 @@ Cloning this repository downloads distribution metadata. It does not download th
 - Revoke exposed or unused keys at the [API key console](https://academica.sh/mcp/keys).
 - Report security concerns privately to [sid@academica.sh](mailto:sid@academica.sh).
 
-[Privacy policy](https://academica.sh/legal/privacy) · [Terms](https://academica.sh/legal/terms) · [Apache 2.0 license](LICENSE)
+[Privacy policy](https://academica.sh/legal/privacy) · [Terms](https://academica.sh/legal/terms) · [MIT license](LICENSE)
 
 ---
 
