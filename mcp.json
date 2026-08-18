@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "academica-pubmed": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/pubmed"
+    },
+    "academica-clinical-trials": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/clinical-trials"
+    },
+    "academica-open-payments": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/open-payments"
+    },
+    "academica-hcp": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/hcp"
+    }
+  }
+}

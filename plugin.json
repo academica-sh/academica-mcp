@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "academica-mcp",
+  "version": "1.0.0",
+  "description": "Read-only PubMed, Clinical Trials, Open Payments, and healthcare-provider evidence for AI agents.",
+  "author": {
+    "name": "Academica",
+    "email": "sid@academica.sh",
+    "url": "https://academica.sh"
+  },
+  "homepage": "https://academica.sh/mcp",
+  "repository": "https://github.com/academica-sh/academica-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "biomedical-research",
+    "pubmed",
+    "clinical-trials",
+    "open-payments",
+    "healthcare-providers"
+  ]
+}

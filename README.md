@@ -160,6 +160,8 @@ Use API Key authentication with the Bearer scheme. The privacy policy URL is `ht
 
 ```text
 academica-mcp/
+├── plugin.json                         # Open Plugins identity
+├── mcp.json                            # Portable four-server MCP catalog
 ├── .claude-plugin/marketplace.json      # Claude Code marketplace catalog
 ├── plugins/
 │   ├── academica-pubmed/                # Independent plugin manifest
