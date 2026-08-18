@@ -24,6 +24,10 @@
     "academica-sec-filings": {
       "type": "streamable-http",
       "url": "https://academica.sh/api/mcp/sec-filings"
+    },
+    "academica-provider-market": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/provider-market"
     }
   }
 }

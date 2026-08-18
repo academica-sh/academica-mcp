@@ -1,0 +1,1 @@
+{"mcpServers":{"academica-provider-market":{"type":"http","url":"https://academica.sh/api/mcp/provider-market","headers":{"Authorization":"Bearer ${ACADEMICA_API_KEY}"}}}}

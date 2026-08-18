@@ -23,3 +23,7 @@ mcp_servers:
     url: https://academica.sh/api/mcp/sec-filings
     headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
     supports_parallel_tool_calls: true
+  academica-provider-market:
+    url: https://academica.sh/api/mcp/provider-market
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true

@@ -1,0 +1,17 @@
+manifest_version: 1
+name: academica-provider-market
+description: NPPES provider identity, declared organization relationships, observed procedure utilization, and account comparisons.
+source: https://github.com/academica-sh/academica-mcp
+transport:
+  type: http
+  url: "https://academica.sh/api/mcp/provider-market"
+auth:
+  type: api_key
+  env:
+    - {name: ACADEMICA_API_KEY, prompt: "Academica API key", required: true, secret: true}
+suggest:
+  keywords: [NPI, NPPES, providers, affiliations, utilization, accounts]
+  hosts: [academica.sh]
+post_install: |
+  API keys: https://academica.sh/mcp/keys
+  Privacy: https://academica.sh/legal/privacy
