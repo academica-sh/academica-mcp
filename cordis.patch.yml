@@ -1,0 +1,33 @@
+- insert:
+    - id: academica-pubmed-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: academica_pubmed
+        transport: streamable-http
+        url: https://academica.sh/api/mcp/pubmed
+        headers:
+          Authorization: !!js `Bearer ${process.env.ACADEMICA_API_KEY}`
+    - id: academica-clinical-trials-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: academica_clinical_trials
+        transport: streamable-http
+        url: https://academica.sh/api/mcp/clinical-trials
+        headers:
+          Authorization: !!js `Bearer ${process.env.ACADEMICA_API_KEY}`
+    - id: academica-open-payments-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: academica_open_payments
+        transport: streamable-http
+        url: https://academica.sh/api/mcp/open-payments
+        headers:
+          Authorization: !!js `Bearer ${process.env.ACADEMICA_API_KEY}`
+    - id: academica-hcp-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: academica_hcp
+        transport: streamable-http
+        url: https://academica.sh/api/mcp/hcp
+        headers:
+          Authorization: !!js `Bearer ${process.env.ACADEMICA_API_KEY}`

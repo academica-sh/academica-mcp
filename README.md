@@ -106,18 +106,53 @@ Authorization: Bearer <Academica API key>
 <details>
 <summary><strong>Cursor</strong></summary>
 
-```json
-{
-  "mcpServers": {
-    "academica-pubmed": {
-      "url": "https://academica.sh/api/mcp/pubmed",
-      "headers": {
-        "Authorization": "Bearer ${env:ACADEMICA_API_KEY}"
-      }
-    }
-  }
-}
+Install the repository as a Cursor Plugin. Under **Plugins → Configure**, set the required `ACADEMICA_API_KEY` variable. The native manifest registers all four servers without storing the key in the repository.
+</details>
+
+<details>
+<summary><strong>Codex</strong></summary>
+
+```bash
+export ACADEMICA_API_KEY="ak_…"
+codex plugin marketplace add academica-sh/academica-mcp
+codex plugin add academica-pubmed@academica
 ```
+
+The Codex marketplace contains four independently installable plugins. Each uses native `bearer_token_env_var` credential resolution.
+</details>
+
+<details>
+<summary><strong>OpenCode</strong></summary>
+
+Copy or merge one file from [`clients/opencode`](clients/opencode) into the applicable `opencode.json`. Individual-server examples and an optional all-server configuration use `{env:ACADEMICA_API_KEY}` substitution with OAuth disabled.
+</details>
+
+<details>
+<summary><strong>Hermes Agent</strong></summary>
+
+Merge [`clients/hermes/config.yaml`](clients/hermes/config.yaml) into `~/.hermes/config.yaml` and expose `ACADEMICA_API_KEY` to Hermes. Four upstream-ready catalog manifests are provided under [`clients/hermes/catalog`](clients/hermes/catalog).
+</details>
+
+<details>
+<summary><strong>DeepSeek Harness</strong></summary>
+
+```bash
+export ACADEMICA_API_KEY="ak_…"
+dsh plugin --profile web add github:academica-sh/academica-mcp
+```
+
+The package mounts four instances of DeepSeek's official Streamable HTTP MCP client through [`cordis.patch.yml`](cordis.patch.yml). Installation is per Harness profile.
+</details>
+
+<details>
+<summary><strong>Pi</strong></summary>
+
+```bash
+export ACADEMICA_API_KEY="ak_…"
+pi install git:github.com/academica-sh/academica-mcp
+```
+
+The Pi package loads an Academica extension backed by `pi-mcp-adapter`. All four servers are available; individual entries can be enabled or disabled through the adapter controls.
 </details>
 
 <details>
@@ -162,9 +197,15 @@ Use API Key authentication with the Bearer scheme. The privacy policy URL is `ht
 academica-mcp/
 ├── plugin.json                         # Open Plugins identity
 ├── mcp.json                            # Portable four-server MCP catalog
+├── .cursor-plugin/plugin.json          # Cursor variables and authenticated MCPs
+├── .agents/plugins/marketplace.json    # Codex marketplace catalog
 ├── .claude-plugin/marketplace.json      # Claude Code marketplace catalog
+├── package.json                        # DeepSeek Harness and Pi package
+├── cordis.patch.yml                    # DeepSeek MCP client bundle
+├── extensions/                         # Pi MCP adapter extension
+├── clients/                            # OpenCode and Hermes configurations
 ├── plugins/
-│   ├── academica-pubmed/                # Independent plugin manifest
+│   ├── academica-pubmed/                # Claude and Codex plugin manifests
 │   ├── academica-clinical-trials/
 │   ├── academica-open-payments/
 │   └── academica-hcp/

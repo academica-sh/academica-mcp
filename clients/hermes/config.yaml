@@ -1,0 +1,17 @@
+mcp_servers:
+  academica-pubmed:
+    url: https://academica.sh/api/mcp/pubmed
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true
+  academica-clinical-trials:
+    url: https://academica.sh/api/mcp/clinical-trials
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true
+  academica-open-payments:
+    url: https://academica.sh/api/mcp/open-payments
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true
+  academica-hcp:
+    url: https://academica.sh/api/mcp/hcp
+    headers: {Authorization: "Bearer ${ACADEMICA_API_KEY}"}
+    supports_parallel_tool_calls: true

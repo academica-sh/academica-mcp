@@ -1,0 +1,1 @@
+{"$schema":"https://opencode.ai/config.json","mcp":{"academica_hcp":{"type":"remote","url":"https://academica.sh/api/mcp/hcp","enabled":true,"oauth":false,"headers":{"Authorization":"Bearer {env:ACADEMICA_API_KEY}"}}}}

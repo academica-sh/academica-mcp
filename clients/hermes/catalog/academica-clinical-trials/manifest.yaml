@@ -1,0 +1,17 @@
+manifest_version: 1
+name: academica-clinical-trials
+description: Clinical-trial protocol, recruitment, intervention, eligibility, and outcome retrieval.
+source: https://github.com/academica-sh/academica-mcp
+transport:
+  type: http
+  url: "https://academica.sh/api/mcp/clinical-trials"
+auth:
+  type: api_key
+  env:
+    - {name: MCP_ACADEMICA_CLINICAL_TRIALS_API_KEY, prompt: "Academica API key", required: true, secret: true}
+suggest:
+  keywords: [clinical trials, study protocols, medical research]
+  hosts: [academica.sh]
+post_install: |
+  API keys: https://academica.sh/mcp/keys
+  Privacy: https://academica.sh/legal/privacy

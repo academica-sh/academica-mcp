@@ -1,0 +1,43 @@
+{
+  "name": "academica-mcp",
+  "version": "1.0.0",
+  "description": "Read-only scientific evidence from PubMed, Clinical Trials, Open Payments, and healthcare-provider records.",
+  "author": {
+    "name": "Academica",
+    "email": "sid@academica.sh"
+  },
+  "homepage": "https://academica.sh/mcp",
+  "repository": "https://github.com/academica-sh/academica-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "pubmed", "clinical-trials", "open-payments", "healthcare"],
+  "logo": "assets/academica-mark.svg",
+  "mcpServers": {
+    "academica-pubmed": {
+      "url": "https://academica.sh/api/mcp/pubmed",
+      "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
+    },
+    "academica-clinical-trials": {
+      "url": "https://academica.sh/api/mcp/clinical-trials",
+      "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
+    },
+    "academica-open-payments": {
+      "url": "https://academica.sh/api/mcp/open-payments",
+      "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
+    },
+    "academica-hcp": {
+      "url": "https://academica.sh/api/mcp/hcp",
+      "headers": {"Authorization": "Bearer ${ACADEMICA_API_KEY}"}
+    }
+  },
+  "variables": {
+    "type": "object",
+    "properties": {
+      "ACADEMICA_API_KEY": {
+        "type": "string",
+        "title": "Academica API key",
+        "description": "Bearer key issued at https://academica.sh/mcp/keys"
+      }
+    },
+    "required": ["ACADEMICA_API_KEY"]
+  }
+}

@@ -1,0 +1,17 @@
+manifest_version: 1
+name: academica-pubmed
+description: PubMed biomedical literature retrieval with retained source identifiers.
+source: https://github.com/academica-sh/academica-mcp
+transport:
+  type: http
+  url: "https://academica.sh/api/mcp/pubmed"
+auth:
+  type: api_key
+  env:
+    - {name: MCP_ACADEMICA_PUBMED_API_KEY, prompt: "Academica API key", required: true, secret: true}
+suggest:
+  keywords: [pubmed, biomedical literature, medical research]
+  hosts: [academica.sh]
+post_install: |
+  API keys: https://academica.sh/mcp/keys
+  Privacy: https://academica.sh/legal/privacy

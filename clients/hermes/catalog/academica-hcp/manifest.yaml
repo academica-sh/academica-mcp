@@ -1,0 +1,17 @@
+manifest_version: 1
+name: academica-hcp
+description: US NPI healthcare-provider identity, taxonomy, credential, and location retrieval.
+source: https://github.com/academica-sh/academica-mcp
+transport:
+  type: http
+  url: "https://academica.sh/api/mcp/hcp"
+auth:
+  type: api_key
+  env:
+    - {name: MCP_ACADEMICA_HCP_API_KEY, prompt: "Academica API key", required: true, secret: true}
+suggest:
+  keywords: [npi, healthcare providers, nppes]
+  hosts: [academica.sh]
+post_install: |
+  API keys: https://academica.sh/mcp/keys
+  Privacy: https://academica.sh/legal/privacy

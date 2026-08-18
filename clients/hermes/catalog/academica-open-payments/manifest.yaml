@@ -1,0 +1,17 @@
+manifest_version: 1
+name: academica-open-payments
+description: CMS Open Payments transfer-of-value and ownership-disclosure retrieval.
+source: https://github.com/academica-sh/academica-mcp
+transport:
+  type: http
+  url: "https://academica.sh/api/mcp/open-payments"
+auth:
+  type: api_key
+  env:
+    - {name: MCP_ACADEMICA_OPEN_PAYMENTS_API_KEY, prompt: "Academica API key", required: true, secret: true}
+suggest:
+  keywords: [open payments, cms, financial disclosures]
+  hosts: [academica.sh]
+post_install: |
+  API keys: https://academica.sh/mcp/keys
+  Privacy: https://academica.sh/legal/privacy
