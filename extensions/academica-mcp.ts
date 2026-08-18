@@ -10,7 +10,8 @@ export default createMcpAdapter({
       "academica-open-payments": {url: "https://academica.sh/api/mcp/open-payments", headers: {Authorization: authorization}},
       "academica-hcp": {url: "https://academica.sh/api/mcp/hcp", headers: {Authorization: authorization}},
       "academica-sec-ownership": {url: "https://academica.sh/api/mcp/sec-ownership", headers: {Authorization: authorization}},
-      "academica-sec-filings": {url: "https://academica.sh/api/mcp/sec-filings", headers: {Authorization: authorization}}
+      "academica-sec-filings": {url: "https://academica.sh/api/mcp/sec-filings", headers: {Authorization: authorization}},
+      "academica-provider-market": {url: "https://academica.sh/api/mcp/provider-market", headers: {Authorization: authorization}}
     }
   }
 });

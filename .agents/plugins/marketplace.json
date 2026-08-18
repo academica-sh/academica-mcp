@@ -7,6 +7,7 @@
     {"name":"academica-open-payments","source":{"source":"local","path":"./plugins/academica-open-payments"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
     {"name":"academica-hcp","source":{"source":"local","path":"./plugins/academica-hcp"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
     {"name":"academica-sec-ownership","source":{"source":"local","path":"./plugins/academica-sec-ownership"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
-    {"name":"academica-sec-filings","source":{"source":"local","path":"./plugins/academica-sec-filings"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"}
+    {"name":"academica-sec-filings","source":{"source":"local","path":"./plugins/academica-sec-filings"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"},
+    {"name":"academica-provider-market","source":{"source":"local","path":"./plugins/academica-provider-market"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Research"}
   ]
 }

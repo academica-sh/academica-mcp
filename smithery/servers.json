@@ -30,6 +30,11 @@
       "qualifiedName": "@academica/sec-filings",
       "displayName": "Academica SEC Filings & Fundamentals",
       "url": "https://academica.sh/api/mcp/sec-filings"
+    },
+    {
+      "qualifiedName": "@academica/provider-market",
+      "displayName": "Academica Provider & Account Intelligence",
+      "url": "https://academica.sh/api/mcp/provider-market"
     }
   ]
 }
