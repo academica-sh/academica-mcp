@@ -16,6 +16,10 @@
     "academica-hcp": {
       "type": "streamable-http",
       "url": "https://academica.sh/api/mcp/hcp"
+    },
+    "academica-sec-ownership": {
+      "type": "streamable-http",
+      "url": "https://academica.sh/api/mcp/sec-ownership"
     }
   }
 }

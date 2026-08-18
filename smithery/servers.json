@@ -20,6 +20,11 @@
       "qualifiedName": "@academica/hcp",
       "displayName": "Academica Healthcare Providers",
       "url": "https://academica.sh/api/mcp/hcp"
+    },
+    {
+      "qualifiedName": "@academica/sec-ownership",
+      "displayName": "Academica SEC Ownership & Flows",
+      "url": "https://academica.sh/api/mcp/sec-ownership"
     }
   ]
 }
